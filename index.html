@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Fisioterapia pélvica e obstétrica com a Dra. Gabriela Lucas, em São Caetano do Sul e região do ABC. Vinte anos na saúde da mulher e especialização pela HCFMUSP.">
+<link rel="icon" href="logo_green.webp">
+<title>Dra. Gabriela Lucas · Fisioterapia pélvica e obstétrica</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+html{scroll-behavior:smooth}
+body{overflow-x:hidden}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--live);box-shadow:0 0 0 4px rgba(76,175,109,.16);flex:none;animation:pl 2.8s infinite;display:inline-block}
+@keyframes pl{0%,100%{box-shadow:0 0 0 4px rgba(76,175,109,.16)}50%{box-shadow:0 0 0 9px rgba(76,175,109,.04)}}
+div::-webkit-scrollbar{height:0}
+/* ── Hero: full-bleed photograph with a white smoke veil under the copy ── */
+.hero-band{position:relative;isolation:isolate;min-height:clamp(560px,calc(100vw*768/1376),820px);display:grid;align-items:center;overflow:hidden;background:var(--paper-2)}
+.hero-stage{position:absolute;inset:0;z-index:0;perspective:1200px;overflow:hidden}
+.hero-img{width:100%;height:100%;object-fit:cover;object-position:100% 50%;transform-origin:50% 50%}
+/* the fumê: a blurred, brightened pane masked so it dissolves toward the right */
+.hero-smoke{position:absolute;inset:0;z-index:1;pointer-events:none;backdrop-filter:blur(22px) brightness(1.1) saturate(.85);-webkit-backdrop-filter:blur(22px) brightness(1.1) saturate(.85);-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 26%,rgba(0,0,0,.5) 46%,transparent 64%);mask-image:linear-gradient(90deg,#000 0%,#000 26%,rgba(0,0,0,.5) 46%,transparent 64%);background:linear-gradient(90deg,rgba(250,246,240,.95) 0%,rgba(250,246,240,.88) 28%,rgba(250,246,240,.48) 50%,rgba(250,246,240,0) 68%)}
+.hero-copy{position:relative;z-index:2;box-sizing:border-box;width:100%;max-width:var(--max);margin-inline:auto;padding:clamp(40px,5vw,64px) var(--pad)}
+.hero-copy>*{max-width:min(500px,46%)}
+@media(max-width:900px){
+  .hero-band{min-height:0;display:block;padding-bottom:clamp(28px,6vw,44px)}
+  .hero-stage{position:relative;inset:auto;aspect-ratio:16/10}
+  .hero-smoke{-webkit-mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.4) 46%,#000 66%);mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.4) 46%,#000 66%);background:linear-gradient(180deg,rgba(250,246,240,0) 0%,rgba(250,246,240,.6) 48%,rgba(250,246,240,.96) 70%)}
+  .hero-img{object-position:70% 50%}
+  .hero-copy>*{max-width:100%}
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .hero-smoke{background:linear-gradient(90deg,rgba(250,246,240,.99) 0%,rgba(250,246,240,.97) 30%,rgba(250,246,240,.58) 52%,rgba(250,246,240,0) 70%)}
+}
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="ds-bundle.js"></script>
+</head><body>
+<div id="root"></div>
+<script type="text/babel" src="pelvic-floor-3d.jsx"></script>
+<script type="text/babel" src="hero-section.jsx"></script>
+<script type="text/babel" src="sections.jsx"></script>
+<script type="text/babel" src="landing.jsx"></script>
+</body></html>
