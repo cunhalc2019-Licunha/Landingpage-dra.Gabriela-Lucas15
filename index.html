@@ -48,5 +48,3 @@ div::-webkit-scrollbar{height:0}
 <script type="text/babel" src="landing.jsx"></script>
 <script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a||!window.gtag)return;var h=a.getAttribute('href')||'';var t=(a.innerText||'icone').trim().slice(0,40);if(h.indexOf('wa.me')>-1||h.indexOf('api.whatsapp.com')>-1){gtag('event','whatsapp_click',{button_text:t});}else if(h.indexOf('tel:')===0){gtag('event','phone_click',{button_text:t});}},true);</script>
 </body></html>
-
-</script>
